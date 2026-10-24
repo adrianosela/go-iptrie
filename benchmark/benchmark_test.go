@@ -14,7 +14,7 @@ import (
 
 	"github.com/asergeyev/nradix"
 	infoblox "github.com/infobloxopen/go-trees/iptree"
-	"github.com/phemmer/go-iptrie"
+	"github.com/adrianosela/go-iptrie"
 	"github.com/yl2chen/cidranger"
 )
 
@@ -89,17 +89,17 @@ type pkg interface {
 }
 
 type IPTrie struct {
-	trie *iptrie.Trie
+	trie iptrie.Trie[string]
 }
 
 func (ipt *IPTrie) Name() string {
 	return "IPTrie"
 }
 func (ipt *IPTrie) Init() {
-	ipt.trie = iptrie.NewTrie()
+	ipt.trie = iptrie.NewTrie[string]()
 }
 func (ipt *IPTrie) LoadNets(nets []string) {
-	loader := iptrie.NewTrieLoader(ipt.trie)
+	loader := iptrie.NewTrieLoader[string](ipt.trie)
 	for _, ipStr := range nets {
 		loader.Insert(netip.MustParsePrefix(ipStr), ipStr)
 	}
@@ -109,7 +109,7 @@ func (ipt *IPTrie) ConvertIPNative(ipStr string) any {
 }
 func (ipt *IPTrie) Lookup(lookup []any, results *[]any) {
 	for i, ip := range lookup {
-		(*results)[i] = ipt.trie.Find(ip.(netip.Addr))
+		(*results)[i], _ = ipt.trie.Find(ip.(netip.Addr))
 	}
 }
 func (ipt *IPTrie) Check(lookup []any, results *[]bool) {

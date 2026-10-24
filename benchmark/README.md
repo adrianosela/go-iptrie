@@ -22,7 +22,7 @@ This test retrieves the value stored with the network that matches each of a lar
 
 | Name     | Package                                                                                               | Repo                                      |
 |----------|-------------------------------------------------------------------------------------------------------|-------------------------------------------|
-| IPTrie   | [github.com/phemmer/go-iptrie](https://pkg.go.dev/github.com/phemmer/go-iptrie)                       | https://www.github.com/phemmer/go-iptrie  |
+| IPTrie   | [github.com/adrianosela/go-iptrie](https://pkg.go.dev/github.com/adrianosela/go-iptrie)               | https://www.github.com/adrianosela/go-iptrie |
 | Infoblox | [github.com/infobloxopen/go-trees/iptree](https://pkg.go.dev/github.com/infobloxopen/go-trees/iptree) | https://github.com/infobloxopen/go-trees/ |
 | NRadix   | [github.com/asergeyev/nradix](https://pkg.go.dev/github.com/asergeyev/nradix)                         | https://github.com/asergeyev/nradix       |
 | Ranger   | [github.com/yl2chen/cidranger](https://pkg.go.dev/github.com/yl2chen/cidranger)                       | https://github.com/yl2chen/cidranger/     |

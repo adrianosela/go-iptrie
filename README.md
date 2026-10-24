@@ -1,4 +1,4 @@
-[![Go Reference](https://pkg.go.dev/badge/github.com/phemmer/go-iptrie.svg)](https://pkg.go.dev/github.com/phemmer/go-iptrie)
+[![Go Reference](https://pkg.go.dev/badge/github.com/adrianosela/go-iptrie.svg)](https://pkg.go.dev/github.com/adrianosela/go-iptrie)
 
 # iptrie
 Highly performant IP storage & lookup using a trie in Golang.
@@ -24,7 +24,7 @@ import (
   "net"
   "net/netip"
 
-  "github.com/phemmer/go-iptrie"
+  "github.com/adrianosela/go-iptrie"
 )
 ```
 Create a new ranger implemented using Path-Compressed prefix trie.
@@ -86,7 +86,7 @@ for network in []string{
 
 # Benchmark
 
-The below table represents the results of benchmarking operations against different IP tree implementations. Full details can be found [here](https://www.github.com/phemmer/go-iptrie/tree/master/benchmark).
+The below table represents the results of benchmarking operations against different IP tree implementations. Full details can be found [here](https://www.github.com/adrianosela/go-iptrie/tree/master/benchmark).
 
 These results measure the performance of each test. The value is the number of operations per second, with the percentage compared to the fastest result in parentheses.
 
@@ -99,7 +99,7 @@ These results measure the performance of each test. The value is the number of o
 
 | Name     | Package                                                                                               | Repo                                      |
 |----------|-------------------------------------------------------------------------------------------------------|-------------------------------------------|
-| IPTrie   | [github.com/phemmer/go-iptrie](https://pkg.go.dev/github.com/phemmer/go-iptrie)                       | https://www.github.com/phemmer/go-iptrie  |
+| IPTrie   | [github.com/adrianosela/go-iptrie](https://pkg.go.dev/github.com/adrianosela/go-iptrie)               | https://www.github.com/adrianosela/go-iptrie |
 | Infoblox | [github.com/infobloxopen/go-trees/iptree](https://pkg.go.dev/github.com/infobloxopen/go-trees/iptree) | https://github.com/infobloxopen/go-trees/ |
 | NRadix   | [github.com/asergeyev/nradix](https://pkg.go.dev/github.com/asergeyev/nradix)                         | https://github.com/asergeyev/nradix       |
 | Ranger   | [github.com/yl2chen/cidranger](https://pkg.go.dev/github.com/yl2chen/cidranger)                       | https://github.com/yl2chen/cidranger/     |
